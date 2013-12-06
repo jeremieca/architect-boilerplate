@@ -1,0 +1,29 @@
+{
+    "name": "nodejs-boilerplate",
+    "version": "0.0.1",
+    "private": true,
+    
+    "description": "An architect based boilerplate ",
+    "author": "Jérémie Campari <jeremie.campari@gmail.com>",
+    "contributors": [],
+    
+    "main": "server.js",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "engines": {
+        "node": "0.10.21"
+    },
+    "dependencies": {
+        "architect": "~0.1.0",
+        "passport": "0.1.17",
+        "passport-facebook": "1.0.1",
+        "mongoose": "3.8.0",
+        "express": "3.4.4"
+    },
+    "devDependencies": {
+        "docco": "0.6.2"
+    },
+    "optionalDependencies": {}
+}

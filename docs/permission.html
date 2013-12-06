@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>permission.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="config.html">
+                config.js
+              </a>
+            
+              
+              <a class="source" href="configPermission.html">
+                configPermission.js
+              </a>
+            
+              
+              <a class="source" href="auth.html">
+                auth.js
+              </a>
+            
+              
+              <a class="source" href="user.html">
+                user.js
+              </a>
+            
+              
+              <a class="source" href="http.html">
+                http.js
+              </a>
+            
+              
+              <a class="source" href="static-file.html">
+                static-file.js
+              </a>
+            
+              
+              <a class="source" href="autoloader.html">
+                autoloader.js
+              </a>
+            
+              
+              <a class="source" href="mongoose.html">
+                mongoose.js
+              </a>
+            
+              
+              <a class="source" href="permission.html">
+                permission.js
+              </a>
+            
+              
+              <a class="source" href="permission.html">
+                permission.js
+              </a>
+            
+              
+              <a class="source" href="server.html">
+                server.js
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>permission.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="keyword">var</span>
+_ = require(<span class="string">"underscore"</span>),
+Permission;
+
+<span class="function"><span class="keyword">function</span> <span class="title">Permission</span><span class="params">(options, imports, register)</span> {</span>
+
+	Permission = imports.mongoose.Permission
+
+    register(<span class="literal">null</span>, {
+
+    	permission: {
+
+    		isAllowedOrOwner: isAllowedOrOwner
+
+    	}
+
+    });
+
+};
+
+<span class="function"><span class="keyword">function</span> <span class="title">isAllowedOrOwner</span> <span class="params">(targetName, actionName, user, entity, callback)</span> {</span>
+
+	Permission.getRolesFromTargetAndAction(targetName, actionName, <span class="function"><span class="keyword">function</span><span class="params">(err, roles)</span> {</span>
+
+		<span class="keyword">if</span>(err) {
+			console.error(<span class="string">"[ Permission plugin ]"</span> + err)
+			callback(<span class="literal">false</span>);
+		}
+
+		callback(
+			(
+				(user) &amp;&amp;
+				(user.roles) &amp;&amp;
+				(roles) &amp;&amp;
+				(
+					_.intersection(roles, user.roles).length &gt; <span class="number">0</span> ||
+					isOwner(entity, user)
+			   	)
+			) ? <span class="literal">true</span> : <span class="literal">false</span>
+		);
+
+	});
+
+}
+
+<span class="function"><span class="keyword">function</span> <span class="title">isOwner</span> <span class="params">(entity, user)</span> {</span>
+
+	<span class="keyword">if</span> (entity &amp;&amp; entity.getOwner() === user.getOwnerIdentifier()) {
+
+		<span class="keyword">return</span> <span class="literal">true</span>;
+
+	}
+
+	<span class="keyword">return</span> <span class="literal">false</span>;
+
+}
+
+module.exports = Permission;
+
+<span class="comment">/**
+*	Usage docs
+*
+*	var perm = new Permission();
+*    perm.targetName = 'post';
+*    perm.actions.push({ actionName: 'edit', roles: ["admin"] });
+*	perm.save(function (err) {
+*		if (!err) console.log('Success!');
+*	});
+*
+*    app.get('/allow', function(req, res) {
+*
+*    	isAllowedOrOwner ('post', 'edit', auth.getCurrentUser(req), { getOwner: function () { return "jceampari"; } }, function(state){
+*    		res.send("state:" + state);
+*    	});
+*		
+*	
+*	});
+**/</span></pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

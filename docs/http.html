@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>http.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="config.html">
+                config.js
+              </a>
+            
+              
+              <a class="source" href="configPermission.html">
+                configPermission.js
+              </a>
+            
+              
+              <a class="source" href="auth.html">
+                auth.js
+              </a>
+            
+              
+              <a class="source" href="user.html">
+                user.js
+              </a>
+            
+              
+              <a class="source" href="http.html">
+                http.js
+              </a>
+            
+              
+              <a class="source" href="static-file.html">
+                static-file.js
+              </a>
+            
+              
+              <a class="source" href="autoloader.html">
+                autoloader.js
+              </a>
+            
+              
+              <a class="source" href="mongoose.html">
+                mongoose.js
+              </a>
+            
+              
+              <a class="source" href="server.html">
+                server.js
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>http.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>module.exports = <span class="function"><span class="keyword">function</span> <span class="title">setup</span><span class="params">(options, imports, register)</span> {</span>
+
+    <span class="keyword">var</span> express = require(<span class="string">'express'</span>);
+    <span class="keyword">var</span> port    = options.port;
+    <span class="keyword">var</span> app     = express();
+
+    app.use(express.cookieParser());
+
+    register(<span class="literal">null</span>, {
+
+        app: {
+            get:        <span class="function"><span class="keyword">function</span> <span class="params">(route, handler)</span> {</span>
+                            app.get(route, handler);
+                        },
+            put:        <span class="function"><span class="keyword">function</span> <span class="params">(route, handler)</span> {</span>
+                            app.put(route, handler);
+                        },
+            post:       <span class="function"><span class="keyword">function</span> <span class="params">(route, handler)</span> {</span>
+                            app.post(route, handler);
+                        },
+            del:        <span class="function"><span class="keyword">function</span> <span class="params">(route, handler)</span> {</span>
+                            app.<span class="keyword">delete</span>(route, handler);
+                        },
+            middleware: <span class="function"><span class="keyword">function</span> <span class="params">(routes)</span> {</span>
+                            app.use(routes);
+                        }
+        }
+
+    });
+
+    <span class="keyword">if</span>(app.listen(port)) {
+        console.info(<span class="string">"Server launched"</span>);
+    }
+
+};</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

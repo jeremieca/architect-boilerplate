@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>config.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="config.html">
+                config.js
+              </a>
+            
+              
+              <a class="source" href="configPermission.html">
+                configPermission.js
+              </a>
+            
+              
+              <a class="source" href="auth.html">
+                auth.js
+              </a>
+            
+              
+              <a class="source" href="user.html">
+                user.js
+              </a>
+            
+              
+              <a class="source" href="http.html">
+                http.js
+              </a>
+            
+              
+              <a class="source" href="static-file.html">
+                static-file.js
+              </a>
+            
+              
+              <a class="source" href="autoloader.html">
+                autoloader.js
+              </a>
+            
+              
+              <a class="source" href="mongoose.html">
+                mongoose.js
+              </a>
+            
+              
+              <a class="source" href="server.html">
+                server.js
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>config.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>module.exports = [
+	{
+		packagePath: <span class="string">"./plugins/http-app"</span>,
+		port: <span class="number">8080</span>
+	},
+	{
+		packagePath: <span class="string">"./plugins/http-static"</span>,
+		root: <span class="string">"www"</span>
+	},
+	{
+		packagePath: <span class="string">"./plugins/auth"</span>,
+		express: {
+			session: {
+				secret: <span class="string">"jk&lt;y8FY8fçYDfç!fyshdfç!qsd!9p^q$ùqsdpà"</span>
+			}
+		},
+		providers: {
+			facebook : {
+				clientID: <span class="string">"561307557258037"</span>,
+				clientSecret: <span class="string">"bd5aadc3e31027a496446afd54d91020"</span>,
+				callbackURL: <span class="string">"/auth/facebook/callback"</span>
+			}
+		}
+	},
+	{
+		packagePath: <span class="string">"./plugins/mongoose-connect"</span>,
+		connect: <span class="string">"mongodb://localhost/myapp"</span>,
+		modelDirectory: <span class="string">"mongoose"</span>
+	}
+]</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

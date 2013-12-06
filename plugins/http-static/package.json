@@ -1,0 +1,10 @@
+{
+    "name": "http-static",
+    "version": "0.0.1",
+    "main": "static-file.js",
+    "private": true,
+
+    "plugin": {
+        "consumes": ["app"]
+    }
+}

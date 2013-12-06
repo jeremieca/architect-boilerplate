@@ -1,0 +1,10 @@
+{
+    "name": "mongoose-connect",
+    "version": "0.0.1",
+    "main": "mongoose.js",
+    "private": true,
+
+    "plugin": {
+        "provides": ["mongoose"]
+    }
+}

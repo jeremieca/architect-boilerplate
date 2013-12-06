@@ -1,0 +1,10 @@
+{
+    "name": "http-app",
+    "version": "0.0.1",
+    "main": "http.js",
+    "private": true,
+
+    "plugin": {
+        "provides": ["app"]
+    }
+}
