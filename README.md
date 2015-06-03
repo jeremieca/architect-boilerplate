@@ -41,7 +41,7 @@ To generate the code go to the root of project and exec the folowing bash comman
 
 // Todo : Handling errors  
 // Todo : Improve Readme and documentation  
-// Todo : Add new modules
-// Todo : Add functionnal and integration testing
-// Todo : Add Codeship and Codacy
+// Todo : Add new modules  
+// Todo : Add functionnal and integration testing  
+// Todo : Add Codeship and Codacy  
 
