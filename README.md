@@ -1,11 +1,5 @@
 # Architect boilerplate
 
-// Todo : Handling errors  
-// Todo : Improve Readme and documentation  
-// Todo : Add new modules
-// Todo : Add functionnal and integration testing
-// Todo : Add Codeship and Codacy
-
 # Library used
 
 Architect (by Cloud9) : Plugins loader  
@@ -43,5 +37,12 @@ To generate the code go to the root of project and exec the folowing bash comman
 
     find . -path "./node_modules*" -prune -o -name '*.js' -exec docco {} +  
 
+# Work to do
+
+// Todo : Handling errors  
+// Todo : Improve Readme and documentation  
+// Todo : Add new modules
+// Todo : Add functionnal and integration testing
+// Todo : Add Codeship and Codacy
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/d62b190d065ffa4ae25eb3e46d843f60 "githalytics.com")](http://githalytics.com/jeremieca/nodejs-boilerplate)
