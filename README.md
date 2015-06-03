@@ -33,7 +33,7 @@ Architect loads all plugins module referencing and configuring in config.js file
 
 See documentation of code in docs folder  
 
-To generate the code go to the root of project and exec the folowing bash command  
+To generate the code documentation, go to the root of project and exec the folowing bash command  
 
     find . -path "./node_modules*" -prune -o -name '*.js' -exec docco {} +  
 
