@@ -2,6 +2,9 @@
 
 // Todo : Handling errors  
 // Todo : Improve Readme and documentation  
+// Todo : Add new modules
+// Todo : Add functionnal and integration testing
+// Todo : Add Codeship and Codacy
 
 # Library used
 
