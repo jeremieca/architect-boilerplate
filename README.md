@@ -1,5 +1,11 @@
 # Architect boilerplate
 
+In my point of view, Architect is the best architecture that you can use for your Nodejs project. It is light, efficient and strongly build around Dependency Injection design pattern.  
+  
+Sadly, Architect is really minimalist. So start with architect can consume a lot of time, developing low level modules like express integration, mongoose support, cors support, smart file upload... And, moreover, Architect is not really testable. 
+  
+This project is actually at a start point with few features. I will work on it soon.  
+
 # Library used
 
 Architect (by Cloud9) : Plugins loader  
