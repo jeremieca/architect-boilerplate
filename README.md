@@ -1,4 +1,4 @@
-# Nodejs boilerplate
+# Architect boilerplate
 
 // Todo : Handling errors  
 // Todo : Improve Readme and documentation  
