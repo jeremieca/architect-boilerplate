@@ -45,4 +45,3 @@ To generate the code go to the root of project and exec the folowing bash comman
 // Todo : Add functionnal and integration testing
 // Todo : Add Codeship and Codacy
 
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/d62b190d065ffa4ae25eb3e46d843f60 "githalytics.com")](http://githalytics.com/jeremieca/nodejs-boilerplate)
